@@ -74,7 +74,7 @@ public class MyGroupName : CogsAgent
         discreteActionsOut[3] = 0; //....................3
 
         //TODO-2: Uncomment this next line when implementing GoBackToBase();
-        //discreteActionsOut[4] = 0;
+        discreteActionsOut[4] = 0;
 
        
         if (Input.GetKey(KeyCode.UpArrow))
@@ -92,6 +92,7 @@ public class MyGroupName : CogsAgent
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             //TODO-1: Using the above as examples, set the action out for the left arrow press
+            discreteActionsOut[1] = 2;
         }
         
 
@@ -103,6 +104,9 @@ public class MyGroupName : CogsAgent
         //GoToNearestTarget
         if (Input.GetKey(KeyCode.A)){
             discreteActionsOut[3] = 1;
+        }
+        if (Input.GetKey(KeyCode.S)){
+            discreteActionsOut[4] = 1;
         }
 
 
@@ -116,15 +120,16 @@ public class MyGroupName : CogsAgent
         int forwardAxis = (int)act[0]; //NN output 0
 
         //TODO: Set these variables to their appopriate item from the act list
-        int rotateAxis = 0; 
-        int shootAxis = 0; 
-        int goToTargetAxis = 0; 
+        int rotateAxis = (int)act[1]; 
+        int shootAxis = (int)act[2]; 
+        int goToTargetAxis = (int)act[3];
+        int goToBaseAxis = (int)act[4];
         
         //TODO-2: Uncomment this next line and set it to the appropriate item from the act list
         //int goToBaseAxis = 0;
 
         //TODO-2: Make sure to remember to add goToBaseAxis when working on that part!
-        MovePlayer(forwardAxis, rotateAxis, shootAxis, goToTargetAxis);
+        MovePlayer(forwardAxis, rotateAxis, shootAxis, goToTargetAxis, goToBaseAxis);
 
     }
 
@@ -171,7 +176,7 @@ public class MyGroupName : CogsAgent
         rewardDict.Add("dropped-targets", 0f);
     }
     
-    private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToTargetAxis)
+    private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToTargetAxis, int goToBaseAxis)
     //TODO-2: Add goToTargetAxis as an argument to this function ^
     {
         dirToGo = Vector3.zero;
@@ -194,6 +199,7 @@ public class MyGroupName : CogsAgent
         }
         else if (forwardAxis == 2){
             //TODO-1: Tell your agent to go backward!
+            dirToGo = backward;
         }
 
         //rotateAxis: 
@@ -204,11 +210,19 @@ public class MyGroupName : CogsAgent
             //do nothing
         }
         //TODO-1 : Implement the other cases for rotateDir
-
+        else if (rotateAxis == 1) {
+            rotateDir = right;
+        }
+        else if (rotateAxis == 2) {
+            rotateDir = left;
+        }
 
         //shoot
         if (shootAxis == 1){
             SetLaser(true);
+        }
+        else {
+            SetLaser(false);
         }
 
         //go to the nearest target
@@ -217,7 +231,9 @@ public class MyGroupName : CogsAgent
         }
 
         //TODO-2: Implement the case for goToBaseAxis
-
+        if (goToBaseAxis == 1) {
+            GoToBase();
+        }
         
     }
 

@@ -54,6 +54,8 @@ public class FinalStageManager : MonoBehaviour
         cam2.transform.SetParent(agent2.transform);
         cam1.transform.localPosition = new Vector3(0f, 1.5f, -5f);
         cam2.transform.localPosition = new Vector3(0f, 1.5f, -5f);
+        cam1.transform.localRotation = Quaternion.identity;
+        cam2.transform.localRotation = Quaternion.identity;
         
         winnerTextbox.enabled = false;
         agent1Script = agent1.GetComponent(WorldConstants.agent1ID) as CogsAgent;

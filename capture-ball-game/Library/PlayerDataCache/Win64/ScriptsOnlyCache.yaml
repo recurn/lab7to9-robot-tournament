@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - HomeBase
     - MyGroupName
     - TA_Example_1
-    - TA_Example_2
     - Target
     - Timer
     Unity.ML-Agents.dll:
@@ -61,39 +60,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11714}
+      Script: {instanceID: 11666}
     - Class: 114
-      Script: {instanceID: 11794}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 12132}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 12152}
     - Class: 114
-      Script: {instanceID: 12202}
+      Script: {instanceID: 12160}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12442}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 12494}
     - Class: 114
-      Script: {instanceID: 12544}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 13244}
     - Class: 114
-      Script: {instanceID: 13296}
+      Script: {instanceID: 13486}
     - Class: 114
-      Script: {instanceID: 13536}
+      Script: {instanceID: 13612}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13828}
     - Class: 114
-      Script: {instanceID: 13878}
-    - Class: 114
-      Script: {instanceID: 14064}
+      Script: {instanceID: 14014}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -281,12 +278,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
-  - hash:
-      serializedVersion: 2
-      Hash: 5d470960c5db2f9c229c37ff99d0996e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TA_Example_2
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -487,12 +478,6 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 5d470960c5db2f9c229c37ff99d0996e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MyAgent
-  - hash:
-      serializedVersion: 2
       Hash: 13e9d6c719122d23d910fb740fce9fa4
     assemblyName: Unity.ML-Agents.dll
     namespaceName: Unity.MLAgents.Policies
@@ -662,5 +647,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/AgentTraining.unity
-  playerPath: C:/Cogs300 Lab Dev/cogs300-final-project-github/cogs300-robot-tournament/cogs300-final-project/Build/TeachingBuild/Final
+  playerPath: C:/Jason/cogs300-unity-lab/lab7to9-robot-tournament/capture-ball-game/Build/ExampleBuild/Final
     Project Testing V2.exe

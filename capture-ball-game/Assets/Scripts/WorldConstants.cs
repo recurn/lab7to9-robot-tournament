@@ -3,6 +3,6 @@
     //              agent2ID should be group name for Agent 2 (bottom left corner)
     // For Training: agent1ID and agent2ID should both be set to your group name
     
-    public const string agent1ID = "";
-    public const string agent2ID = "";
+    public const string agent1ID = "MyGroupName";
+    public const string agent2ID = "MyGroupName";
 }
