@@ -64,17 +64,18 @@ public class CogsAgent : Agent
 
         timer = GameObject.FindGameObjectWithTag("Timer");
         
+        
+
+        myLaser = transform.Find("Laser").gameObject;
+    }
+
+    protected virtual void Start() {
         GameObject[] agents = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject agent in agents) {
             if (agent != gameObject) {
                 enemy = agent;
             }
         }     
-
-        myLaser = transform.Find("Laser").gameObject;
-    }
-
-    protected virtual void Start() {
         if (transform.name == "Agent 1") {
             team = 1;
         }
