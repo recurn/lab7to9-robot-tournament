@@ -91,6 +91,10 @@ public class CogsAgent : Agent
     protected virtual void FixedUpdate() {
         moveSpeed = maxMoveSpeed - (0.05f * carriedTargets.Count);
         turnSpeed = maxTurnSpeed - (10f * carriedTargets.Count);
+        
+        if (moveSpeed < 0) {
+            moveSpeed = 0;
+         }
 
 
         if (rBody.velocity.sqrMagnitude > 25f) // slow it down
