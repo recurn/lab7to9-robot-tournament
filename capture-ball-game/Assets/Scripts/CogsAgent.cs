@@ -192,6 +192,16 @@ public class CogsAgent : Agent
     
     // ----------------------USEFUL HELPERS------------------------
     // For controlling agent's processing and actions
+    
+    //Called within FixedUpdate to control the movement of the agent
+    public void moveAgent(Vector3 dirToGo, Vector3 rotateDir){
+        if(!IsFrozen()){
+            if (!IsLaserOn()){
+                rBody.AddForce(dirToGo * GetMoveSpeed(), ForceMode.VelocityChange);
+            }
+            transform.Rotate(rotateDir, Time.deltaTime * GetTurnSpeed());
+        }
+    }
 
     // try activating laser and return true if laser succesfully activated, false otherwise
     protected bool LaserControl() {
