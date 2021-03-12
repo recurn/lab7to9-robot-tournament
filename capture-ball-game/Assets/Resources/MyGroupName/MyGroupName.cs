@@ -133,18 +133,19 @@ public class MyGroupName : CogsAgent
     // Called when object collides with or trigger (similar to collide but without physics) other objects
     protected override void OnTriggerEnter(Collider collision)
     {
-        base.OnTriggerEnter(collision);
+        
 
         
         if (collision.gameObject.CompareTag("HomeBase") && collision.gameObject.GetComponent<HomeBase>().team == GetTeam())
         {
             //Add rewards here
         }
+        base.OnTriggerEnter(collision);
     }
 
     protected override void OnCollisionEnter(Collision collision) 
     {
-        base.OnCollisionEnter(collision);
+        
 
         //target is not in my base and is not being carried and I am not frozen
         if (collision.gameObject.CompareTag("Target") && collision.gameObject.GetComponent<Target>().GetInBase() != GetTeam() && collision.gameObject.GetComponent<Target>().GetCarried() == 0 && !IsFrozen())
@@ -156,6 +157,7 @@ public class MyGroupName : CogsAgent
         {
             //Add rewards here
         }
+        base.OnCollisionEnter(collision);
     }
 
 
