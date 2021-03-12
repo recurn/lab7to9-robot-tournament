@@ -101,12 +101,7 @@ public class TA_Example_1 : CogsAgent
 
         LaserControl();
 
-        if(!IsFrozen()){
-            if (!IsLaserOn()){
-                rBody.AddForce(dirToGo * GetMoveSpeed(), ForceMode.VelocityChange);
-            }
-            transform.Rotate(rotateDir, Time.deltaTime * GetTurnSpeed());
-        }
+        moveAgent(dirToGo, rotateDir);
     }
 
     protected override void OnTriggerEnter(Collider collision)
