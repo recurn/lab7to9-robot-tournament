@@ -34,8 +34,8 @@ public class CogsAgent : Agent
     protected List<GameObject> carriedTargets; // list of targets currently being carried by the agent
 
     protected Vector3 dirToGo, rotateDir; // vectors for direction to go towards and direction to rotate
-    private const float maxMoveSpeed = 1; 
-    private const float maxTurnSpeed = 150;
+    private const float maxMoveSpeed = 1.5; 
+    private float maxTurnSpeed = 100;
     
     private const float m_LaserLength = 20;
     private GameObject myLaser;
@@ -208,6 +208,7 @@ public class CogsAgent : Agent
         if (IsLaserOn() && !IsFrozen())
         {
             if (rewardDict.ContainsKey("shooting-laser")) AddReward(rewardDict["shooting-laser"]);
+            maxTurnSpeed = 50;
             var myTransform = transform;
             var rayDir = m_LaserLength * myTransform.forward;
             Debug.DrawRay(myTransform.position, rayDir, Color.red, 0f, true);
@@ -231,7 +232,7 @@ public class CogsAgent : Agent
         {
             myLaser.transform.localScale = new Vector3(0f, 0f, 0f);
             myLaser.transform.localPosition = new Vector3(0f,0f,0f);
-
+            maxTurnSpeed = 100;
             return false;
         }
     }
