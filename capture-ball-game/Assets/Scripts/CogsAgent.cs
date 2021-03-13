@@ -34,7 +34,7 @@ public class CogsAgent : Agent
     protected List<GameObject> carriedTargets; // list of targets currently being carried by the agent
 
     protected Vector3 dirToGo, rotateDir; // vectors for direction to go towards and direction to rotate
-    private const float maxMoveSpeed = 1.5; 
+    private const float maxMoveSpeed = 1.5f; 
     private float maxTurnSpeed = 100;
     
     private const float m_LaserLength = 20;
