@@ -92,8 +92,8 @@ public class CogsAgent : Agent
         moveSpeed = maxMoveSpeed - (0.05f * carriedTargets.Count);
         turnSpeed = maxTurnSpeed - (10f * carriedTargets.Count);
         
-        if (moveSpeed < 0) {
-            moveSpeed = 0;
+        if (turnSpeed < 0) {
+            turnSpeed = 0;
          }
 
 
