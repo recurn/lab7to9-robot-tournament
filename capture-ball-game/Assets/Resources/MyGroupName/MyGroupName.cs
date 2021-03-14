@@ -100,9 +100,6 @@ public class MyGroupName : CogsAgent
         if (Input.GetKey(KeyCode.A)){
             discreteActionsOut[3] = 1;
         }
-        if (Input.GetKey(KeyCode.S)){
-            discreteActionsOut[4] = 1;
-        }
 
 
         //TODO-2: implement a keypress (your choice of key) for the output for GoBackToBase();
