@@ -115,7 +115,6 @@ public class MyGroupName : CogsAgent
         //int rotateAxis; 
         //int shootAxis; 
         //int goToTargetAxis;
-        //int goToBaseAxis;
         
         //TODO-2: Uncomment this next line and set it to the appropriate item from the act list
         //int goToBaseAxis = 0;
