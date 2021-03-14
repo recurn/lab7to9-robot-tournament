@@ -122,6 +122,9 @@ public class MyGroupName : CogsAgent
 
         //TODO-2: Make sure to remember to add goToBaseAxis when working on that part!
         
+        MovePlayer(forwardAxis, rotateAxis, shootAxis, goToTargetAxis, goToBaseAxis);
+
+        
 
     }
 
