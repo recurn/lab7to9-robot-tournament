@@ -117,7 +117,7 @@ public class MyGroupName : CogsAgent
         //int goToTargetAxis;
         
         //TODO-2: Uncomment this next line and set it to the appropriate item from the act list
-        //int goToBaseAxis = 0;
+        //int goToBaseAxis;
 
         //TODO-2: Make sure to remember to add goToBaseAxis when working on that part!
         
