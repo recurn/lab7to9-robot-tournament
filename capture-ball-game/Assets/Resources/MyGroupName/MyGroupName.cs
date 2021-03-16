@@ -112,9 +112,9 @@ public class MyGroupName : CogsAgent
         int forwardAxis = (int)act[0]; //NN output 0
 
         //TODO-1: Set these variables to their appopriate item from the act list
-        //int rotateAxis; 
-        //int shootAxis; 
-        //int goToTargetAxis;
+        int rotateAxis = 0; 
+        int shootAxis = 0; 
+        int goToTargetAxis = 0;
         
         //TODO-2: Uncomment this next line and set it to the appropriate item from the act list
         //int goToBaseAxis;
@@ -172,8 +172,8 @@ public class MyGroupName : CogsAgent
         rewardDict.Add("dropped-targets", 0f);
     }
     
-    private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToBaseAxis)
-    //TODO-2: Add goToTargetAxis as an argument to this function ^
+    private void MovePlayer(int forwardAxis, int rotateAxis, int shootAxis, int goToTargetAxis)
+    //TODO-2: Add goToBase as an argument to this function ^
     {
         dirToGo = Vector3.zero;
         rotateDir = Vector3.zero;
